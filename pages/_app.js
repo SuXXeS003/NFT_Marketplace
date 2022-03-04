@@ -12,17 +12,17 @@ function MyApp({ Component, pageProps }) {
                             Home
                         </a>
                     </Link>
-                    <Link href="/create-item">
+                    <Link href="/create-nft">
                         <a className="mr-6 text-pink-500">
                             Sell Digital Asset
                         </a>
                     </Link>
-                    <Link href="/my-assets">
+                    <Link href="/my-nfts">
                         <a className="mr-6 text-pink-500">
                             My Digital Assets
                         </a>
                     </Link>
-                    <Link href="/creator-dashboard">
+                    <Link href="/dashboard">
                         <a className="mr-6 text-pink-500">
                             Creator Dashboard
                         </a>

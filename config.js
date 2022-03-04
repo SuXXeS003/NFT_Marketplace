@@ -1,2 +1,3 @@
-export const nftmarketaddress = "market-contract-address"
-export const nftaddress = "nft-contract-address"
+
+  export const marketplaceAddress = "0x0cc8e0527186Da194ce645A3c4beF5155687f6fD"
+  

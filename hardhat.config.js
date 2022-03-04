@@ -1,29 +1,17 @@
-/* hardhat.config.js */
-require("@nomiclabs/hardhat-waffle")
-const fs = require('fs')
-const privateKey = fs.readFileSync(".secret").toString().trim() || "01234567890123456789"
+require("@nomiclabs/hardhat-waffle");
+require("dotenv").config();
 
 module.exports = {
-  defaultNetwork: "hardhat",
+  solidity: "0.8.4",
   networks: {
-    hardhat: {
-      chainId: 1337
-      },
-      /*
     mumbai: {
-      url: "https://rpc-mumbai.matic.today",
-      accounts: [privateKey]
-    }
-      */
+        url: process.env.STAGING_ALCHEMY_KEY,
+        accounts: [process.env.PRIVATE_KEY],
+    },
+    mainnet: {
+        chainId: 1,
+        url: process.env.PROD_ALCHEMY_KEY,
+        accounts: [process.env.PRIVATE_KEY],
+    },
   },
-
-  solidity: {
-    version: "0.8.4",
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 200
-      }
-    }
-  }
-}
+};
